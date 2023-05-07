@@ -541,13 +541,7 @@ header nav {
     }
   }
 
-/* Estilização do aside
-.item-newsletter {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  flex-direction: column;
-} */
+
 
 .secao {
   display: flex;
@@ -638,23 +632,43 @@ header nav {
   }
   .container {
     display: flex;
+    flex-basis: 100%;
 
     flex-wrap: nowrap; /* permite que as imagens sejam quebradas em várias linhas */
-    justify-content: center; /* centraliza as imagens horizontalmente */
-    
-    max-width: 1000px; /* define uma largura máxima para o contêiner */
+    justify-content: space-around; /* centraliza as imagens horizontalmente */
+    max-width: 100% /* define uma largura máxima para o contêiner */
   }
   
-  .container img {
+  .container div {
     margin: 20px 20px 20px;
-    max-width: 100%; /* garante que as imagens não ultrapassem a largura do contêiner */
-    background-color: #FFFFFF;
-    margin:50px
+    max-width: 150px; /* garante que as imagens não ultrapassem a largura do contêiner */
+    background-color: #ffffff;
+    margin: 20px;
 
+  }
+
+  .container img{
+    width: 100%;
   }
   
  
-  
+  @media (max-width: 74rem){
+    #aside-oficial{
+      flex-basis: 100%;
+      width: 0px;
+
+    }
+    .group{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    #area-secao{
+    
+      flex-basis: 100%;
+      width: 100%;
+      float: none;
+  }
+  }
   @media (max-width: 768px) {
     .container img {
       margin-right: 10px; /* reduz a margem à direita das imagens em telas menores */
@@ -669,8 +683,8 @@ header nav {
     display: flex;
 
     flex-wrap: nowrap; /* permite que as imagens sejam quebradas em várias linhas */
-    justify-content: center; /* centraliza as imagens horizontalmente */
-    max-width: 1000px; /* define uma largura máxima para o contêiner */
+    justify-content: space-around; /* centraliza as imagens horizontalmente */
+    max-width: 1000px; /*define uma largura máxima para o contêiner */
     margin: 100px 30px 30px;
   }
   
@@ -680,12 +694,7 @@ header nav {
     margin-right: 0; /* remove a margem da última imagem */
   }
   
-  @media (max-width: 768px) {
-    .container img {
-      margin-right: 10px; /* reduz a margem à direita das imagens em telas menores */
-      margin-bottom: 10px; /* reduz a margem inferior das imagens em telas menores */
-    }
-  }
+
 
   .info-destaque{
     background-color: aquamarine;
@@ -818,6 +827,7 @@ header nav {
     clear: both;
 }
 .group {
+  
      zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }
 
